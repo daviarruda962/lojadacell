@@ -66,8 +66,9 @@ Sua missão é ler listas brutas de fornecedores ou mensagens de WhatsApp com es
         },
       });
 
-      const responseText = response.text || '[]';
-      const parsedItems = JSON.parse(responseText);
+      const rawResponseText = response.text || '[]';
+      const cleanResponseText = rawResponseText.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
+      const parsedItems = JSON.parse(cleanResponseText);
       return res.json({ success: true, items: parsedItems, source: 'gemini' });
     }
 
