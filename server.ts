@@ -63,24 +63,6 @@ Sua missão é ler listas brutas de fornecedores ou mensagens de WhatsApp com es
 - originalPrice: Preço estimado ligeiramente superior (ex: 15% acima).
 - notes: Observações extras sobre acessórios, caixa, cabo ou estado do aparelho.`,
           responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.ARRAY,
-            description: 'Lista de iPhones extraídos do texto.',
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                model: { type: Type.STRING, description: 'Ex: iPhone 15 Pro Max' },
-                storage: { type: Type.STRING, description: 'Ex: 256GB' },
-                color: { type: Type.STRING, description: 'Ex: Titânio Natural' },
-                condition: { type: Type.STRING, description: 'Lacrado | Seminovo Impecável | Excelente | Muito Bom' },
-                batteryHealth: { type: Type.NUMBER, description: 'Porcentagem de bateria ou null se lacrado' },
-                price: { type: Type.NUMBER, description: 'Preço em reais numérico' },
-                originalPrice: { type: Type.NUMBER, description: 'Preço de comparação original' },
-                notes: { type: Type.STRING, description: 'Notas ou acessórios inclusos' },
-              },
-              required: ['model', 'storage', 'color', 'condition', 'price'],
-            },
-          },
         },
       });
 
