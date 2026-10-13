@@ -1,0 +1,8 @@
+{
+  "name": "Remix iStore Vitrine - Vitrine de iPhones com IA",
+  "description": "Vitrine moderna e clean para venda de iPhones com IA inteligente que identifica listas de estoque e fotos oficiais em fundo branco estilo marketplace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
